@@ -1,12 +1,20 @@
 <header>
   <nav class="nav collapsible">
     <a class="nav__brand" href="/"> <img src="/images/logo.svg" alt="" /></a>
-    <img class="nav__object" src="/images/icon-hamburger.svg" alt="" />
+    <img
+      id="navobject"
+      class="nav__object"
+      src="/images/icon-hamburger.svg"
+      alt=""
+      onclick="chngimg()"
+    />
     <ul class="list list__centered nav__list collapsible__content">
       <li class="nav__item"><a href="#">HOW WE WORK</a></li>
       <li class="nav__item"><a href="#">BLOG</a></li>
       <li class="nav__item"><a href="#">ACCOUNT</a></li>
       <li class="nav__item"><a href="#">VIEW PLANS</a></li>
+
+      <img class="nav__img" src="/images/bg-pattern-mobile-nav.svg" alt="" />
     </ul>
   </nav>
 </header>

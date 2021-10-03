@@ -91,6 +91,11 @@ h1 {
   text-decoration: none;
 }
 
+.nav__img {
+  margin-top: 4rem;
+  stroke: #96a9c6;
+}
+
 /* Collapsible */
 .collapsible__content {
   max-height: 0;

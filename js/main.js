@@ -4,3 +4,12 @@ collapsibles.forEach((item) =>
     this.classList.toggle("collapsible--expanded");
   })
 );
+
+function chngimg() {
+  let img = document.getElementById("navobject").src;
+  if (img.indexOf("/images/icon-hamburger.svg") != -1) {
+    document.getElementById("navobject").src = "/images/icon-close.svg";
+  } else {
+    document.getElementById("navobject").src = "/images/icon-hamburger.svg";
+  }
+}
