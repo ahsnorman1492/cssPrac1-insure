@@ -1,0 +1,119 @@
+@import url(./normalize.css);
+
+@font-face {
+  font-family: "butlerbold";
+  src: url("/css/fonts/butler/butler_bold-webfont.woff2") format("woff2"),
+    url("/css/fonts/butler/butler_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Color Palette */
+:root {
+  --color-primary: hsl(256, 26%, 20%);
+  --color-primarytwo: hsl(216, 30%, 68%);
+  --color-neutral: hsl(270, 9%, 17%);
+  --color-neutraltwo: hsl(273, 4%, 51%);
+  --color-white: hsl(0, 0%, 98%);
+}
+
+/* Typography */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav__brand {
+  padding-left: 2rem;
+}
+.nav__object {
+  padding: 2rem;
+}
+
+.nav__list {
+  background: var(--color-neutral);
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  width: 30rem;
+  padding: 1.5rem;
+  margin: 0.5rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.nav__item:hover {
+  border: 1px solid var(--color-white);
+  padding: 1.5rem - 1px;
+  margin: 0.5rem - 1px;
+}
+
+.nav__item > a {
+  color: var(--color-white);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Collapsible */
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list__centered {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.25rem;
+}
