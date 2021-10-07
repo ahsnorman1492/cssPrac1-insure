@@ -48,6 +48,25 @@ h1 {
   font-size: 4rem;
 }
 
+/* Collapsible */
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
 /* Navigation */
 .nav {
   display: flex;
@@ -58,7 +77,7 @@ h1 {
 }
 
 .nav__brand {
-  padding-left: 2rem;
+  padding: 3rem 2rem 3rem 2rem;
 }
 .nav__object {
   padding: 2rem;
@@ -68,11 +87,17 @@ h1 {
   background: var(--color-neutral);
   width: 100%;
   margin: 0;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.25rem;
 }
 
 .nav__item {
   display: inline-block;
-  width: 30rem;
+  align-items: center;
+  width: 25rem;
   padding: 1.5rem;
   margin: 0.5rem;
   text-align: center;
@@ -96,29 +121,50 @@ h1 {
   stroke: #96a9c6;
 }
 
-/* Collapsible */
-.collapsible__content {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s;
-}
+@media screen and (min-width: 756px) {
+  .nav {
+    flex-wrap: nowrap;
+    flex-direction: space-between;
+  }
 
-.collapsible--expanded .collapsible__content {
-  max-height: 100vh;
-  opacity: 1;
-}
+  .nav__object {
+    display: none;
+  }
+  .nav__img {
+    width: 0;
+    height: 0;
+  }
+  .nav__list {
+    max-height: 100vh;
+    background: #fff;
+    opacity: 1;
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    margin: 0 5rem 0 5rem;
+  }
 
-/* Lists */
-.list {
-  list-style: none;
-  padding-left: 0;
-}
+  .nav__item {
+    padding: 1rem;
+    vertical-align: center;
+    max-width: 20rem;
+  }
 
-.list__centered {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  letter-spacing: 0.25rem;
+  .nav__item:hover {
+    border: 1px solid var(--color-neutraltwo);
+    background: var(--color-neutral);
+    color: var(--color-white);
+  }
+
+  .nav__item:hover > a {
+    color: var(--color-white);
+  }
+
+  .nav__item > a {
+    color: var(--color-neutral);
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+  }
 }
