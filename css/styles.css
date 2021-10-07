@@ -61,6 +61,12 @@ h1 {
   opacity: 1;
 }
 
+/* Icon Images */
+.icon__image--standard {
+  width: 8rem;
+  height: 8rem;
+}
+
 /* Lists */
 .list {
   list-style: none;
@@ -167,4 +173,21 @@ h1 {
     height: 100%;
     white-space: nowrap;
   }
+}
+
+/* main points */
+
+.main-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+}
+
+.main-point__content {
+  color: var(--color-neutraltwo);
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 2.4rem;
+  margin: 0;
 }
