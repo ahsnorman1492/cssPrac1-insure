@@ -224,8 +224,16 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
-  min-height: 400px;
+}
+
+.banner--small {
+  max-width: 300px;
+  min-height: 300px;
+}
+
+.banner--large {
+  max-width: 375px;
+  min-height: 375px;
 }
 
 .banner__title {
@@ -237,6 +245,10 @@ h1 {
   color: var(--color-white);
   text-align: center;
   margin: 0 3rem 3rem 3rem;
+}
+
+.banner__btn {
+  margin-bottom: 8rem;
 }
 
 /* socialmedia */
@@ -302,4 +314,21 @@ h1 {
   text-decoration: none;
   font-weight: 700;
   line-height: 3.5rem;
+}
+
+/* Hero*/
+.hero__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__image {
+  content: url("/images/image-intro-mobile.webp");
+}
+
+@media screen and (min-width: 768px) {
+  .hero__image {
+    content: url("/images/image-intro-desktop.webp");
+  }
 }
