@@ -15,6 +15,7 @@
   --color-neutral: hsl(270, 9%, 17%);
   --color-neutraltwo: hsl(273, 4%, 51%);
   --color-white: hsl(0, 0%, 98%);
+  --color-line: hsl(0, 0%, 87.5%);
 }
 
 /* Typography */
@@ -239,10 +240,6 @@ h1 {
 }
 
 /* socialmedia */
-.social-media {
-  /* display: flex; */
-  flex-direction: column;
-}
 
 .social-media__links {
   display: flex;
@@ -252,6 +249,12 @@ h1 {
   margin-bottom: 3rem;
 }
 
+/* line */
+.footer .line {
+  width: calc(100% - 40px);
+  border-bottom: 1px solid var(--color-line);
+  margin: 0 0 1rem 0;
+}
 /* footer */
 
 .footer {
