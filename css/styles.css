@@ -293,6 +293,7 @@ h1 {
 @media screen and (min-width: 768px) {
   .banner--top {
     max-width: none;
+    min-height: unset;
     width: 100%;
   }
 
@@ -306,7 +307,7 @@ h1 {
 
   .banner__text {
     text-align: left;
-    margin: 0 3rem 3rem 3rem;
+    margin: 0 3rem 3rem 5vw;
   }
 
   .banner--top .banner__content {
@@ -327,10 +328,10 @@ h1 {
   .banner__title {
     color: var(--color-white);
     text-align: left;
-    margin: 2rem 3rem 2rem 3rem;
+    margin: 2rem 3rem 2rem 5vw;
   }
   .banner--top .btn {
-    margin: 0 0 5rem 3rem;
+    margin: 0 0 5rem 5vw;
   }
 
   .banner--bottom .btn {
@@ -418,9 +419,40 @@ h1 {
   margin-bottom: 8rem;
 }
 
-@media screen and (min-width: 768px) {
+.hero__block .line {
+  width: 150px;
+  border-bottom: 1px solid var(--color-neutraltwo);
+  margin: 10rem 0 3rem 5vw;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .hero__image {
+    position: absolute;
+    top: 5rem;
+    left: 50vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
   .hero__image {
     content: url("/images/image-intro-desktop.webp");
+    position: absolute;
+    top: 5rem;
+    left: 45vw;
   }
 }
 
